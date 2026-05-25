@@ -1,0 +1,16 @@
+node_modules
+dist
+.DS_Store
+.env
+.env.local
+.vite
+*.log
+
+# Личные артефакты тестового задания — не публикуем
+CONTEXT.md
+ideas.md
+test_work.md
+*.png
+# Сохранённая страница AppFollow (референс из браузера)
+Reviews feed.html
+Reviews feed_files/
