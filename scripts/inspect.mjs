@@ -5,7 +5,7 @@
 import fs from 'node:fs'
 import { parse } from 'node-html-parser'
 
-const html = fs.readFileSync('Reviews_feed.html', 'utf8')
+const html = fs.readFileSync(process.env.HTML ?? 'Reviews_feed.html', 'utf8')
 const root = parse(html)
 const body = root.querySelector('body')
 

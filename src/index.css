@@ -44,3 +44,28 @@ body {
 .af-fade-in {
   animation: af-fade-in 300ms ease-out;
 }
+
+/* Подсветка карточки отзыва при клике "test it" в сайдбаре.
+ * Лёгкое голубое мерцание + рамка на 1.5 сек. */
+@keyframes af-review-pulse {
+  0% {
+    background-color: rgba(35, 128, 249, 0);
+    box-shadow: 0 0 0 0 rgba(35, 128, 249, 0);
+  }
+  20% {
+    background-color: rgba(35, 128, 249, 0.10);
+    box-shadow: 0 0 0 3px rgba(35, 128, 249, 0.25);
+  }
+  60% {
+    background-color: rgba(35, 128, 249, 0.08);
+    box-shadow: 0 0 0 3px rgba(35, 128, 249, 0.18);
+  }
+  100% {
+    background-color: rgba(35, 128, 249, 0);
+    box-shadow: 0 0 0 0 rgba(35, 128, 249, 0);
+  }
+}
+.af-review-pulse {
+  animation: af-review-pulse 1500ms ease-out;
+  border-radius: 8px;
+}

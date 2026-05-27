@@ -84,29 +84,21 @@ export default function TabbedSection({
   // section.AJ1eTTY[.iOfzpNa][.npfiQI3]
   return (
     <section
-      className={`relative flex h-auto min-w-0 flex-col overflow-hidden bg-af-bg-primary ${
+      className={`relative flex h-full min-h-0 min-w-0 flex-col overflow-hidden bg-af-bg-primary ${
         bordered ? 'rounded-af-lg border border-af-bg-stroke' : ''
       } ${padded ? 'pt-af-xs' : ''} w-full`}
     >
-      {/* .GI6wlKi — flex (на mobile column) */}
-      <div className="flex max-md:flex-col">
-        {/*
-          .x6gGppp — относительный контейнер табов с серой линией под ним (::before).
-          Внутри: ._qoY6Zx (синий индикатор absolute) + .HXHLHyv (сами табы).
-        */}
+      {/* Табы — не растягиваются. */}
+      <div className="flex shrink-0 max-md:flex-col">
         <TabsStrip tabs={tabs} activeKey={activeKey} onChange={onChange} />
-
-        {/*
-          .A1QFRAc — actions с inset shadow снизу (= серая линия 2px), продолжает .x6gGppp::before.
-          На <767px → items-start, column.
-        */}
         {actions && (
           <div className="flex items-center justify-between pr-af-sm max-md:flex-col max-md:items-start [box-shadow:inset_0_-2px_0_0_#e6effa]">
             {actions}
           </div>
         )}
       </div>
-      {children}
+      {/* Контент таба — занимает остаток высоты. */}
+      <div className="flex min-h-0 flex-1 flex-col">{children}</div>
     </section>
   )
 }

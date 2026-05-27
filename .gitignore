@@ -15,4 +15,14 @@ test_work.md
 Reviews feed.html
 Reviews feed_files/
 Reviews_feed.html
+Reviews_feed.html.tmp
+Automation hub/
 STRUCTURE.md
+
+# Личные заметки тестового — копии описания
+description.md
+chat-mode.md
+add_automation.md
+
+# Бэкап AddAutomation на случай отката
+src/scenes/AddAutomation.backup.jsx

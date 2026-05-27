@@ -9,41 +9,7 @@
 // aiDraft.enabled — true показывает блок ответа (expanded или collapsed input).
 
 export const reviews = [
-  // 1) Длинный позитивный — 5 звёзд + развернутый AI-draft (2 варианта)
-  {
-    id: 'r1',
-    rating: 5,
-    title: 'Best app ever, can\'t live without it!',
-    text: "I've been using this app for almost two years now, and it has genuinely changed how I manage my day. The interface is clean, the notifications are smart and not annoying, and every update brings something useful. I especially love the new analytics screen — it gives me a clear picture of my habits and what I need to work on. The developers actually listen to feedback (I reported a bug last month and it was fixed within a week!). Keep it up, this is the gold standard of productivity apps.",
-    date: 'May 25, 2026, 09:17 AM',
-    tags: [
-      { label: '3 semantic tags', variant: 'ai' },
-      { label: 'Praise' },
-      { label: 'Thank you' },
-      { label: 'Feature request' },
-    ],
-    meta: {
-      username: 'productivity_pro',
-      country: 'United Kingdom',
-      language: 'English',
-      appVersion: '4.12.0',
-    },
-    aiDraft: {
-      enabled: true,
-      mode: null, // стартовое состояние switcher'а: ни Ask AI, ни Template не выбраны
-      trackTime: true, // считать время от focus textarea до клика Send Reply
-      tone: 'Grateful',
-      flag: 'Praise',
-      regenLeft: '124',
-      variants: [
-        "Wow, thank you so much for taking the time to write such a thoughtful review! It really means a lot to our team that you've stayed with us for almost two years. We'll keep working hard to ship updates you'll love — and your feedback on analytics has been noted!",
-        "Hi productivity_pro! Two years and still going strong — that's incredible to hear. Glad the analytics screen has been useful, and thanks again for that bug report last month. Reviews like yours are why we love building this app.",
-      ],
-      trial: '14 AI generations left for free. Start trial to get unlimited.',
-    },
-  },
-
-  // 2) Средний короткий — 3 звезды.
+  // 1) Средний короткий — 3 звезды.
   // Стартовое состояние: AI-draft развёрнут, Ask AI активен,
   // первый AI-вариант выбран и его текст подставлен в textarea.
   {
@@ -121,6 +87,42 @@ export const reviews = [
       variants: [
         "We're truly sorry to hear about the trouble you've had since the update — that's not the experience we want anyone to have. I've escalated your support ticket and someone will reach out today. For the data loss, please check Settings → Restore — we automatically back up the last 7 days.",
         "Hi, this sounds incredibly frustrating and I'm sorry it's taken so long to get a response. Could you DM us your ticket number so we can prioritise it? We're also pushing a hotfix for the settings crash tomorrow.",
+      ],
+      trial: '14 AI generations left for free. Start trial to get unlimited.',
+    },
+  },
+
+  // 3) Длинный позитивный — 5 звёзд + развернутый AI-draft (2 варианта).
+  // Перенесён в конец списка: эта карточка отслеживает время ответа,
+  // поэтому используется как финальный "test it"-якорь из сайдбара.
+  {
+    id: 'r1',
+    rating: 5,
+    title: "Best app ever, can't live without it!",
+    text: "I've been using this app for almost two years now, and it has genuinely changed how I manage my day. The interface is clean, the notifications are smart and not annoying, and every update brings something useful. I especially love the new analytics screen — it gives me a clear picture of my habits and what I need to work on. The developers actually listen to feedback (I reported a bug last month and it was fixed within a week!). Keep it up, this is the gold standard of productivity apps.",
+    date: 'May 25, 2026, 09:17 AM',
+    tags: [
+      { label: '3 semantic tags', variant: 'ai' },
+      { label: 'Praise' },
+      { label: 'Thank you' },
+      { label: 'Feature request' },
+    ],
+    meta: {
+      username: 'productivity_pro',
+      country: 'United Kingdom',
+      language: 'English',
+      appVersion: '4.12.0',
+    },
+    aiDraft: {
+      enabled: true,
+      mode: null, // стартовое состояние switcher'а: ни Ask AI, ни Template не выбраны
+      trackTime: true, // считать время от focus textarea до клика Send Reply
+      tone: 'Grateful',
+      flag: 'Praise',
+      regenLeft: '124',
+      variants: [
+        "Wow, thank you so much for taking the time to write such a thoughtful review! It really means a lot to our team that you've stayed with us for almost two years. We'll keep working hard to ship updates you'll love — and your feedback on analytics has been noted!",
+        "Hi productivity_pro! Two years and still going strong — that's incredible to hear. Glad the analytics screen has been useful, and thanks again for that bug report last month. Reviews like yours are why we love building this app.",
       ],
       trial: '14 AI generations left for free. Start trial to get unlimited.',
     },

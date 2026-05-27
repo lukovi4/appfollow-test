@@ -74,7 +74,8 @@ export default function ReviewCard({ review, overallTimeSpent, onSessionTimeAdd 
   return (
     <div
       role="listitem"
-      className="relative grid w-full max-w-full grid-cols-[minmax(20px,min-content)_minmax(0,1fr)] items-start gap-y-af-xs border-t border-af-bg-stroke pl-af-xxs pr-af-xxs pt-[28px] pb-[28px] xl:grid-cols-[minmax(20px,min-content)_minmax(250px,800px)_minmax(230px,1fr)] 5xl:grid-cols-[minmax(20px,min-content)_minmax(250px,1000px)_minmax(280px,1fr)]"
+      id={`review-${review.id}`}
+      className="relative grid w-full max-w-full grid-cols-[minmax(20px,min-content)_minmax(0,1fr)] items-start gap-y-af-xs border-t border-af-bg-stroke pl-af-xxs pr-af-xxs pt-[28px] pb-[28px] xl:grid-cols-[minmax(20px,min-content)_minmax(250px,800px)_minmax(230px,1fr)] 5xl:grid-cols-[minmax(20px,min-content)_minmax(250px,1000px)_minmax(280px,1fr)] scroll-mt-af-lg"
     >
       {/* КОЛОНКА 1: .tbFnn_7 — чекбокс selection */}
       <div className="relative h-full w-full">

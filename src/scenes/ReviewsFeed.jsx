@@ -29,7 +29,7 @@ import { reviews } from '../data/reviews.js'
 //               .cE_vAAr (список карточек)
 //             .GJLHQAz (FilterPanel)
 //     footer.KTYCmPI
-export default function ReviewsFeed() {
+export default function ReviewsFeed({ onNavigate }) {
   // Глобальный счётчик "общего" времени по сессии (суммирует время от всех Send Reply
   // в карточках с trackTime). Сбрасывается только при reload страницы.
   const [overallTimeSpent, setOverallTimeSpent] = useState(null)
@@ -39,7 +39,7 @@ export default function ReviewsFeed() {
 
   return (
     <div className="flex min-h-screen w-full bg-af-bg-page text-af-text-primary">
-      <SidebarNew />
+      <SidebarNew currentPage="reviews" onNavigate={onNavigate} />
 
       <div className="flex min-w-0 flex-1 flex-col">
         <div className="relative p-af-lg">
@@ -49,10 +49,9 @@ export default function ReviewsFeed() {
             <MetricsBar />
 
             <Tabs>
-              {/* .BJCLxMB — grid 1fr / 230px, grid-gap pd-xxs (8px), items-start, transition .3s
-                  При <1024px: flex column-reverse (фильтры сверху).
-                  При >=1800px: 1fr / 300px. При >=1921px: 1fr / 400px. */}
-              <div className="grid grid-cols-1 items-start gap-af-xxs lg:grid-cols-[1fr_230px] 5xl:grid-cols-[1fr_300px] 6xl:grid-cols-[1fr_400px]">
+              {/* .BJCLxMB — grid 1fr / 230px, grid-gap pd-xxs (8px), items-start, transition .3s.
+                  FilterPanel скрыт — grid схлопывается в одну колонку. */}
+              <div className="grid grid-cols-1 items-start gap-af-xxs">
                 {/* .U2B5TKY.Zsrb_6y.vRl208d.fhN_Cxo — левая колонка:
                     flex column, gap pd-sm (16px), text-align left,
                     padding: 12px 16px 16px 16px (pd-xs pd-sm pd-sm).
@@ -75,7 +74,8 @@ export default function ReviewsFeed() {
                     ))}
                   </div>
                 </div>
-                <FilterPanel />
+                {/* Фильтры скрыты по запросу. Компонент сохранён в исходниках. */}
+                {/* <FilterPanel /> */}
               </div>
             </Tabs>
           </div>
