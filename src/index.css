@@ -2,13 +2,45 @@
 @tailwind components;
 @tailwind utilities;
 
+/* Глобальные стили AppFollow:
+ * - Шрифт Lato (как в проде).
+ * - Базовый размер 14px (--text-md в их системе).
+ * - Цвета приведены к --color-text-primary и --color-background-page.
+ */
 html, body, #root {
   height: 100%;
 }
 
 body {
-  font-family: 'Inter', system-ui, -apple-system, sans-serif;
-  color: #1f2330;
-  background: #fff;
+  font-family: 'Lato', Arial, Helvetica, sans-serif;
+  font-size: 14px;
+  color: #213752;
+  background: #f7f9fc;
   -webkit-font-smoothing: antialiased;
+}
+
+/* Скрываем нативный скроллбар у элементов с этим классом. Сам overflow остаётся работающим. */
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+  height: 0;
+  width: 0;
+}
+.no-scrollbar {
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+/* Плавное появление контента (для вариантов ответа при смене mode). */
+@keyframes af-fade-in {
+  from {
+    opacity: 0;
+    transform: translateY(4px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+.af-fade-in {
+  animation: af-fade-in 300ms ease-out;
 }

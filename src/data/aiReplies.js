@@ -1,0 +1,36 @@
+// Пул "сгенерированных AI" ответов для имитации генерации без бэка.
+// Все ответы общие — без привязки к рейтингу/тональности.
+// 30 текстов, из которых интерактив будет случайно подставлять 2 в варианты ответа.
+
+export const aiReplies = [
+  "Thank you so much for the kind words! It really makes our day to hear that the app has been useful for you. We'll keep working hard to make it even better.",
+  "Wow, this review just made our whole team smile! Thanks for taking the time to share your experience — feedback like yours is exactly what keeps us motivated.",
+  "Thank you for such a thoughtful review! It really means a lot that you've stuck with us. We've noted your feedback and we're already working on improvements. Stay tuned for the next update — we think you'll like what's coming.",
+  "You just made our day — thank you! ⭐️",
+  "Thanks for the great review! We genuinely appreciate users who take the time to share their experience. If you ever have feature ideas, we'd love to hear them.",
+  "Hi there! Two years and still going strong — that's amazing to hear. Glad the new features have been useful, and thanks again for the kind words about our team.",
+  "This review absolutely made our morning! Knowing that the app is helping you is exactly why we built it. Your bug reports last month were super helpful too — we love when users actively participate in making the product better. Keep being awesome!",
+  "Glad to hear it's working well for you. Thanks for the review!",
+  "We're really sorry to hear about your experience — that's not the quality we want to deliver. Could you DM us your ticket number so we can prioritise it? We'll get this sorted as fast as we can.",
+  "We're truly sorry for the trouble you've had since the update. I've escalated your support ticket and someone will reach out to you within the next 24 hours. For the data loss, please check Settings → Restore — we automatically back up the last 7 days. Thank you for your patience while we make this right.",
+  "This sounds incredibly frustrating, and we're sorry it's taken so long to get a response. We're pushing a hotfix tomorrow that should resolve the crash on the settings screen. Hang in there.",
+  "We're really sorry about this. Can you send us a DM with your account email so we can help?",
+  "Thank you for taking the time to share this, even when the experience has been disappointing. We hear you, and you deserve better. Our team is actively investigating the crash you described, and we'll have a fix in the next release. In the meantime, please email support@ with your account details and we'll prioritise restoring your data.",
+  "Sorry for the trouble — that's definitely not the experience we want for our users. We've passed your feedback to the engineering team and there's a fix in the works. We'll update you as soon as it ships.",
+  "Apologies for the inconvenience. Please reach out to support@ and we'll get this resolved.",
+  "We completely understand the frustration — a five-day wait on support is not acceptable. We've flagged this internally and a senior team member will be in touch today. Thanks for sticking with us.",
+  "Thanks for the balanced review! Glad most of the experience is solid, and we've noted the lag issues — we're actively optimising for older devices in the next release.",
+  "Thanks for the feedback! We'll look into the performance issue.",
+  "Appreciate the honest review. The lag on older devices is something we're aware of — there's a memory-optimisation pass coming in v4.13 that should help. Hang tight!",
+  "Thanks for taking the time to write this. You're right that performance on older devices needs work — it's actually been our top priority for the last sprint. We're rolling out a major optimisation in the next update that should make a noticeable difference, especially on devices with less RAM. If you can share your device model via support, we'll add you to the beta cohort.",
+  "Thanks for the review and the honest feedback. The widgets feedback was great to hear, and we hear you on dark mode — we're rolling out a deeper, OLED-friendly version soon.",
+  "Got it, thanks for the heads up. We'll keep iterating.",
+  "Thanks for the review!",
+  "We appreciate your feedback.",
+  "Thanks for taking the time to share your thoughts — every bit of feedback helps us improve.",
+  "Thanks for the review! If anything specific comes up, feel free to reach out at support@ — we read every message.",
+  "Appreciate you sharing this! 🙌",
+  "Thanks for the candid review. We're always looking for ways to make the app better, and feedback like this helps a lot.",
+  "Hi! Thanks for sharing your experience. If there's anything specific we can help with, drop us a line at support@ and we'll take a look.",
+  "Really appreciate you taking the time. Thank you!",
+]
